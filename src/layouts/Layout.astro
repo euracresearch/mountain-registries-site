@@ -1,0 +1,26 @@
+---
+import "../assets/globals.css";
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta
+			name="description"
+			content="The aim of the <b>mountain registries</b> is to collect and report information in a standard way and form. The collected data will enable an international comparison between the different strategies applied during the rescue patients in mountain terrains."
+		/>
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
