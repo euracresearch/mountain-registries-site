@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Inter var';
+        font-weight: 100 900;
+        font-display: swap;
+        font-style: normal;
+        font-named-instance: 'Regular';
+        src: url("/fonts/Inter-roman.var.woff2?v=3.19") format("woff2");
+    }
+
+    @font-face {
+        font-family: 'Inter var';
+        font-weight: 100 900;
+        font-display: swap;
+        font-style: italic;
+        font-named-instance: 'Italic';
+        src: url("/fonts/Inter-italic.var.woff2?v=3.19") format("woff2");
+    }
+
+    .itar {
+        color: #b91c1c;
+    }
+
+    .iavar {
+        color: #0369a1;
+    }
+
+    .ihr {
+        color: #0f766e;
+    }
+}
