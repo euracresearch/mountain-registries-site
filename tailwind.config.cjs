@@ -16,7 +16,7 @@ module.exports = {
 					'100%': { 'transform': 'translateX(0)', 'opacity': 1 },
 				},
 				'ekg': {
-					'to': { 'stroke-dashoffset': 0, 'opacity': 0.1 },
+					'to': { 'stroke-dashoffset': 0, 'opacity': 0.2 },
 				}
 			},
 		},

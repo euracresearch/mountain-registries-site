@@ -49,9 +49,7 @@ const { title, subtitle, color, openLink, demoLink } = Astro.props as Props;
 		details.forEach((el) => {
 			if (window.innerWidth >= 1024) {
 				el.setAttribute("open", "");
-			} else {
-				el.removeAttribute("open");
-			}
+			} 
 		})
 	}
 	
