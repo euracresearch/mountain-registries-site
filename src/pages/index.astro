@@ -1,6 +1,5 @@
 ---
 import Card from "../components/Card.astro";
-import Link from "../components/Link.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -66,17 +65,24 @@ import Layout from "../layouts/Layout.astro";
       </h6>
       <ul class="text-xs list-disc ml-4 leading-6 text-black">
         <li>
-          <Link href="/dl/iatr/IATR CRF EN.pdf">IATR CRF EN.pdf</Link>
+          <a
+            class="underline underline-offset-4 hover:decoration-4"
+            href="/dl/iatr/IATR CRF EN.pdf">IATR CRF EN.pdf</a
+          >
         </li>
         <li>
-          <Link href="/dl/iatr/IATR informed consent EN.pdf"
+          <a
+            class="underline underline-offset-4 hover:decoration-4"
+            href="/dl/iatr/IATR informed consent EN.pdf"
             >IATR informed consent EN.pdf
-          </Link>
+          </a>
         </li>
         <li>
-          <Link href="/dl/iatr/IATR Study design EN.pdf"
+          <a
+            class="underline underline-offset-4 hover:decoration-4"
+            href="/dl/iatr/IATR Study design EN.pdf"
             >IATR Study design EN.pdf
-          </Link>
+          </a>
         </li>
       </ul>
     </Card>
@@ -110,21 +116,38 @@ import Layout from "../layouts/Layout.astro";
       <ul class="text-xs list-disc ml-4 leading-6 text-black">
         <li>
           IAVAR Study protocol:
-          <Link href="/dl/iavar/IAVAR Study protocol EN.pdf">EN.pdf</Link> &nbsp;
-          <Link href="/dl/iavar/IAVAR Study protocol DE.pdf">DE.pdf</Link>
+          <a
+            class="underline underline-offset-4 hover:decoration-4"
+            href="/dl/iavar/IAVAR Study protocol EN.pdf">EN.pdf</a
+          > &nbsp;
+          <a
+            class="underline underline-offset-4 hover:decoration-4"
+            href="/dl/iavar/IAVAR Study protocol DE.pdf">DE.pdf</a
+          >
         </li>
         <li>
-          <Link href="/dl/iavar/IAVAR CRF EN.pdf">IAVAR CRF EN.pdf</Link>
+          <a
+            class="underline underline-offset-4 hover:decoration-4"
+            href="/dl/iavar/IAVAR CRF EN.pdf">IAVAR CRF EN.pdf</a
+          >
         </li>
         <li>
-          <Link href="/dl/iavar/IAVAR EC Study protocol DE.pdf"
+          <a
+            class="underline underline-offset-4 hover:decoration-4"
+            href="/dl/iavar/IAVAR EC Study protocol DE.pdf"
             >IAVAR EC Study protocol DE.pdf
-          </Link>
+          </a>
         </li>
         <li>
           IAVAR Informed Consent:
-          <Link href="/dl/iavar/IAVAR Informed Consent DE.pdf">DE.pdf</Link> &nbsp;
-          <Link href="/dl/iavar/IAVAR Informed Consent IT.pdf">IT.pdf</Link>
+          <a
+            class="underline underline-offset-4 hover:decoration-4"
+            href="/dl/iavar/IAVAR Informed Consent DE.pdf">DE.pdf</a
+          > &nbsp;
+          <a
+            class="underline underline-offset-4 hover:decoration-4"
+            href="/dl/iavar/IAVAR Informed Consent IT.pdf">IT.pdf</a
+          >
         </li>
       </ul>
     </Card>
@@ -133,7 +156,7 @@ import Layout from "../layouts/Layout.astro";
       title="Accidental Hypothermia"
       subtitle="International Hypothermia Registry (IHR)"
       color="ihr"
-      openLink=""
+      openLink="https://qualite.hug.ch"
     >
       <p>
         It is the first and only world wide database on human accidental
@@ -153,9 +176,13 @@ import Layout from "../layouts/Layout.astro";
       </h6>
       <ul class="text-xs list-disc ml-4 leading-6 text-black">
         <li>
-          <Link href="https://www.hypothermia-registry.org"
+          <a
+            href="https://www.hypothermia-registry.org"
+            target="_blank"
+            rel="noreferrer"
+            class="underline underline-offset-4 hover:decoration-4"
             >https://www.hypothermia-registry.org
-          </Link>
+          </a>
         </li>
       </ul>
     </Card>
