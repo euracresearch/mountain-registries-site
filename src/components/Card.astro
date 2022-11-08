@@ -5,9 +5,10 @@ export interface Props {
 	subtitle: string;
 	openLink: string;
 	demoLink?: string;
+	analyticsLinkRef?: string;
 }
 
-const { title, subtitle, color, openLink, demoLink } = Astro.props as Props;
+const { title, subtitle, color, openLink, demoLink, analyticsLinkRef } = Astro.props as Props;
 
 ---
 
@@ -22,6 +23,7 @@ const { title, subtitle, color, openLink, demoLink } = Astro.props as Props;
 			target="_blank"
 			rel="noreferrer"
 			class={`uppercase text-sm font-bold underline hover:decoration-4 ${color}`}
+			data-analytics={`'"OpenRegister${analyticsLinkRef}"'`}
 		>
 			Open register
 		</a>{
@@ -32,6 +34,7 @@ const { title, subtitle, color, openLink, demoLink } = Astro.props as Props;
 					target="_blank"
 					rel="noreferrer"
 					class={`uppercase text-xs font-bold underline hover:decoration-4 ${color}`}
+					data-analytics={`'"OpenDemo${analyticsLinkRef}"'`}
 				>
 					Demo version
 				</a>

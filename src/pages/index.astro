@@ -43,6 +43,7 @@ import Layout from "../layouts/Layout.astro";
       subtitle="International Alpine Trauma Registry (IATR)"
       openLink="https://app.mountain-registries.org/index.php?action=myprojects"
       demoLink="https://mountain-registries-demo.azurewebsites.net/index.php?action=myprojects"
+      analyticsLinkRef="ITAR"
     >
       <p>
         The primary aim of Eurac&apos;s International Alpine Trauma Registry
@@ -67,7 +68,8 @@ import Layout from "../layouts/Layout.astro";
         <li>
           <a
             class="underline underline-offset-4 hover:decoration-4"
-            href="/dl/iatr/IATR CRF EN.pdf">IATR CRF EN.pdf</a
+            href="/dl/iatr/IATR CRF EN.pdf">IATR CRF EN.pdf
+            </a
           >
         </li>
         <li>
@@ -93,6 +95,7 @@ import Layout from "../layouts/Layout.astro";
       color="iavar"
       openLink="https://app.mountain-registries.org/index.php?action=myprojects"
       demoLink="https://mountain-registries-demo.azurewebsites.net/index.php?action=myprojects"
+      analyticsLinkRef="IAVAR"
     >
       <p>
         The aim is to determine and compare the key characteristics of
@@ -118,17 +121,20 @@ import Layout from "../layouts/Layout.astro";
           IAVAR Study protocol:
           <a
             class="underline underline-offset-4 hover:decoration-4"
-            href="/dl/iavar/IAVAR Study protocol EN.pdf">EN.pdf</a
+            href="/dl/iavar/IAVAR Study protocol EN.pdf"
+            >EN.pdf</a
           > &nbsp;
           <a
             class="underline underline-offset-4 hover:decoration-4"
-            href="/dl/iavar/IAVAR Study protocol DE.pdf">DE.pdf</a
+            href="/dl/iavar/IAVAR Study protocol DE.pdf"
+            >DE.pdf</a
           >
         </li>
         <li>
           <a
             class="underline underline-offset-4 hover:decoration-4"
-            href="/dl/iavar/IAVAR CRF EN.pdf">IAVAR CRF EN.pdf</a
+            href="/dl/iavar/IAVAR CRF EN.pdf"
+            >IAVAR CRF EN.pdf</a
           >
         </li>
         <li>
@@ -181,6 +187,7 @@ import Layout from "../layouts/Layout.astro";
             target="_blank"
             rel="noreferrer"
             class="underline underline-offset-4 hover:decoration-4"
+            data-analytics='"InfoIHR"'
             >https://www.hypothermia-registry.org
           </a>
         </li>
@@ -196,3 +203,33 @@ import Layout from "../layouts/Layout.astro";
     stroke-dashoffset: 6000;
   }
 </style>
+
+<script>
+  let links = document.querySelectorAll("a[data-analytics]");
+  for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', handleLinkEvent);
+      links[i].addEventListener('auxclick', handleLinkEvent);
+  }
+
+  function handleLinkEvent(event) {
+      var link = event.target;
+      var middle = event.type == "auxclick" && event.which == 2;
+      var click = event.type == "click";
+      while (link && (typeof link.tagName == 'undefined' || link.tagName.toLowerCase() != 'a' || !link.href)) {
+          link = link.parentNode;
+      }
+      if (middle || click) {
+          let attributes = link.getAttribute('data-analytics').split(/,(.+)/);
+          let events = [JSON.parse(attributes[0]), JSON.parse(attributes[1] || '{}')];
+          plausible(...events);
+      }
+      if (!link.target) {
+          if (!(event.ctrlKey || event.metaKey || event.shiftKey) && click) {
+              setTimeout(function () {
+                  location.href = link.href;
+              }, 150);
+              event.preventDefault();
+          }
+      }
+  }
+</script>
