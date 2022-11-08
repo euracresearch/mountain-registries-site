@@ -38,9 +38,8 @@ const { title } = Astro.props as Props;
 					link = link.parentNode;
 				}
 				if (middle || click) {
-					let attributes = link.getAttribute('data-analytics').split(/,(.+)/);
-					let events = [JSON.parse(attributes[0]), JSON.parse(attributes[1] || '{}')];
-					plausible(...events);
+					let attributeValue = link.getAttribute('data-analytics');
+					plausible(attributeValue);
 				}
 				if (!link.target) {
 					if (!(event.ctrlKey || event.metaKey || event.shiftKey) && click) {
