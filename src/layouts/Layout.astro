@@ -21,8 +21,17 @@ const { title } = Astro.props as Props;
 		<title>{title}</title>
 		<script defer data-domain="mountain-registries.org" src="https://plausible.io/js/script.file-downloads.js"></script>
 	</head>
-	<body>
+	<body class="flex flex-col h-screen w-sceen">
 		<slot />
+		
+		<footer class="w-full text-xs flex-grow flex justify-center items-end">
+			<div class="pb-10">
+				<a href="https://www.eurac.edu/en/institutes-centers/institute-of-mountain-emergency-medicine" target="_blank"
+			rel="noreferrer" class="text-neutral-600">Institute of Mountain Emergency Medicine</a> - <a href="https://www.eurac.edu" target="_blank"
+			rel="noreferrer" class="text-neutral-600">Eurac Research</a>
+			</div>
+		</footer>
+
 		<script is:inline>
 			let links = document.querySelectorAll("a[data-analytics]");
 			for (var i = 0; i < links.length; i++) {
