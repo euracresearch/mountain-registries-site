@@ -1,0 +1,203 @@
+import { Box } from "~/components/Box";
+
+export default function Page() {
+  return (
+    <main className="animate-fade-in mb-10 mt-5 text-sm md:grid  md:grid-cols-2 lg:mt-10 2xl:mx-auto 2xl:w-[1536px]">
+      <Box
+        title="Alpine Trauma"
+        color="itar"
+        subtitle="International Alpine Trauma Registry (IATR)"
+        openLink="https://app.mountain-registries.org/index.php?action=myprojects"
+        demoLink="https://mountain-registries-demo.azurewebsites.net/index.php?action=myprojects"
+        analyticsLinkRef="ITAR"
+      >
+        <p>
+          The primary aim of Eurac&apos;s International Alpine Trauma Registry research
+          project is to record all applied strategies for the first aid of traumatised
+          patients in mountain areas. It aims to collect and report information in a
+          standard form on major alpine trauma. It includes patient pre-hospital,
+          in-hospital and outcome information. The collected data will enable an
+          international comparison between the different strategies applied during the
+          rescue of traumatised patients in high altitudes and remote areas. Furthermore,
+          these data could help to scientifically define specific problems of pre-hospital
+          treatment of traumatised patients in remote areas. The second aim of the study is
+          to record the effects of pre-hospital and hospital treatment strategies and
+          parameters on the survival and the outcome of the patients. For that purpose the
+          registry was based on the guidelines of the Utstein-Style Protocol.
+        </p>
+        <details>
+          <summary className="mt-4 text-sm font-bold uppercase text-black">
+            Additional info
+          </summary>
+          <ul className="ml-4 list-disc text-xs leading-6 text-black">
+            <li>
+              <a
+                className="underline underline-offset-4 hover:decoration-4"
+                href="/dl/iatr/IATR CRF EN.pdf"
+              >
+                IATR CRF EN.pdf
+              </a>
+            </li>
+            <li>
+              <a
+                className="underline underline-offset-4 hover:decoration-4"
+                href="/dl/iatr/IATR informed consent EN.pdf"
+              >
+                IATR informed consent EN.pdf
+              </a>
+            </li>
+            <li>
+              <a
+                className="underline underline-offset-4 hover:decoration-4"
+                href="/dl/iatr/IATR Study design EN.pdf"
+              >
+                IATR Study design EN.pdf
+              </a>
+            </li>
+          </ul>
+        </details>
+      </Box>
+
+      <Box
+        title="Avalanche"
+        subtitle="International Avalanche Registry (IAVAR)"
+        color="iavar"
+        openLink="https://app.mountain-registries.org/index.php?action=myprojects"
+        demoLink="https://mountain-registries-demo.azurewebsites.net/index.php?action=myprojects"
+        analyticsLinkRef="IAVAR"
+      >
+        <p>
+          The aim is to determine and compare the key characteristics of prehospital care
+          and patterns of injury in avalanche accidents with persons involved. Its goal is
+          to determine the impact of rescue strategies and treatment recommendations on
+          patient outcomes.The International Avalanche Registry was developed by Eurac in
+          close collaboration with the International Commission of Alpine Rescue ICAR, South
+          Tyrol's mountain rescue organisation and the Avalanche Warning Service in Bolzano.
+          The IAVAR comprises three different chapters: The first chapter covers medical
+          information about incident site, accepting first and maybe second or even third
+          hospitals and about patient outcome. The second chapter contains details of the
+          situation on-site, the situation of the patient(s) rescue details and preventive
+          measure of the victim(s). The third chapter gives additional geographical details
+          and information about the characteristics of the avalanche itself.
+        </p>
+        <details>
+          <summary className="mt-4 text-sm font-bold uppercase text-black">
+            Additional info
+          </summary>
+          <ul className="ml-4 list-disc text-xs leading-6 text-black">
+            <li>
+              IAVAR Study protocol:
+              <a
+                className="underline underline-offset-4 hover:decoration-4"
+                href="/dl/iavar/IAVAR Study protocol EN.pdf"
+              >
+                EN.pdf
+              </a>{" "}
+              &nbsp;
+              <a
+                className="underline underline-offset-4 hover:decoration-4"
+                href="/dl/iavar/IAVAR Study protocol DE.pdf"
+              >
+                DE.pdf
+              </a>
+            </li>
+            <li>
+              <a
+                className="underline underline-offset-4 hover:decoration-4"
+                href="/dl/iavar/IAVAR CRF EN.pdf"
+              >
+                IAVAR CRF EN.pdf
+              </a>
+            </li>
+            <li>
+              <a
+                className="underline underline-offset-4 hover:decoration-4"
+                href="/dl/iavar/IAVAR EC Study protocol DE.pdf"
+              >
+                IAVAR EC Study protocol DE.pdf
+              </a>
+            </li>
+            <li>
+              IAVAR Informed Consent:
+              <a
+                className="underline underline-offset-4 hover:decoration-4"
+                href="/dl/iavar/IAVAR Informed Consent DE.pdf"
+              >
+                DE.pdf
+              </a>{" "}
+              &nbsp;
+              <a
+                className="underline underline-offset-4 hover:decoration-4"
+                href="/dl/iavar/IAVAR Informed Consent IT.pdf"
+              >
+                IT.pdf
+              </a>
+            </li>
+          </ul>
+        </details>
+      </Box>
+
+      <Box
+        title="Frostbite"
+        subtitle="International Frostbite Registry"
+        color="purple-900"
+        openLink="https://app.mountain-registries.org/index.php?action=myprojects"
+        analyticsLinkRef="IFR"
+      >
+        <p>
+          The International Frostbite Registry is an initiative aimed at advancing our
+          understanding and treatment of frostbite. Its goal is to collect and analyze a
+          wide range of data from patients with frostbite injuries across various geographic
+          and demographic backgrounds. The registry is structured to systematically compile
+          information including patient demographics, conditions leading to frostbite,
+          clinical presentations, treatment methods, and patient outcomes. The project's
+          objective is to identify trends, determine risk factors, and establish the most
+          effective treatment strategies for frostbite. The ultimate aim is to contribute to
+          better clinical outcomes, reduce the severity of frostbite cases, and improve the
+          quality of life for patients post-injury. Additionally, the findings from the
+          registry are intended to be utilized in updating and informing clinical practices,
+          guidelines, and policies in the realm of frostbite treatment and prevention.
+        </p>
+      </Box>
+
+      <Box
+        title="Accidental Hypothermia"
+        subtitle="International Hypothermia Registry (IHR)"
+        color="ihr"
+        openLink="https://qualite.hug.ch"
+        analyticsLinkRef="IHR"
+      >
+        <p>
+          It is the first and only world wide database on human accidental hypothermia. This
+          internet based registry was created by the hypothermia working group with the
+          University Hospital of Geneva / Switzerland which hosts the data on its secure
+          server. The IHR&apos;s principle goal is to increase knowledge on accidental
+          hypothermia by gathering sufficient relevant data through international
+          networking, creating the largest data base on deep accidental hypothermia. The
+          registry will enable comparison of treating and rewarming methods, study survival
+          predictor factors and prevention of post rewarming complications. This will help
+          select the most efficient ways to treat these patients and permit the
+          establishment of evidence based diagnosis and treatment guidelines.
+        </p>
+        <details>
+          <summary className="mt-4 text-sm font-bold uppercase text-black">
+            Additional info
+          </summary>
+          <ul className="ml-4 list-disc text-xs leading-6 text-black">
+            <li>
+              <a
+                href="https://www.hypothermia-registry.org"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4 hover:decoration-4"
+                data-analytics='"InfoIHR"'
+              >
+                https://www.hypothermia-registry.org
+              </a>
+            </li>
+          </ul>
+        </details>
+      </Box>
+    </main>
+  );
+}
